@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup Page</title>
+  <style>
+    header {
+   
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  body{background-image: url("background5.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    background-size:100% 100%;}
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 { 
+      text-align: center;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      
+    }
+    .login-btn{
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #007bff;
+      border-radius: 4px;
+      width: 100%;
+      
+
+    }
+    .login-btn a{
+      text-decoration: none;
+      color: rgb(232, 234, 237);
+    }
+    .login-btn:hover {
+      background-color: #0056b3;
+    }
+    .form-footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .form-footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h2 style="color:rgb(249, 244, 244);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">what's up Champs,</h2>
+  <h1 style="color:rgb(248, 243, 243);font-weight:bolder;">The PlayersSpotlight</h1>
+  </header>
+  
+  <nav style="float: right;">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+  </nav>
+<div class="container">
+  <h2 >Login</h2>
+  <form action="" method="get" class="login">
+    <input type="text" name="username" placeholder="Username" required id="username" value ="">
+    <input type="password" name="password" placeholder="Password" required id="pass" value="">
+    <button  class="login-btn" onclick="rev()">Login</button>
+  </form>
+  <div class="form-footer">
+    <p>Don't have an account? <a href="#signup">Sign up</a></p>
+  </div>
+</div>
+<div id="signup" class="container" style="display: none;">
+  <h2>Sign Up</h2>
+  <form action="#" method="post">
+    <input type="text" name="username" placeholder="Username" required >
+    <input type="password" name="password" placeholder="Password" required >
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+    <input type="submit" value="Sign Up">
+  </form>
+  
+  <div class="form-footer">
+    <p>Already have an account? <a href="#">Login</a></p>
+  </div>
+</div>
+<script>
+  document.querySelector('a[href="#signup"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('signup').style.display = 'block';
+  });
+  
+  document.querySelector('a[href="#"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('signup').style.display = 'none';
+    
+  });
+  
+  var loginBtn = document.getElementsByClassName("login");
+  var user = document.getElementById("username");
+  var pw = document.getElementById("pass");
+  var anchor = document.getElementById("anchor");
+  function rev() {
+      if(document.getElementById("username").value =="Aman110@gmail.com" && document.getElementById("pass").value == "12345678"){
+        setTimeout('window.location.href="home.html"', 0); 
+      }
+
+      else{
+        alert("Invalid Username or Password");
+
+      }
+    }
+
+</script>
+
+</body>
+</html>
